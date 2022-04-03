@@ -1,0 +1,14 @@
+Criando rotas:
+app.get("/teste", (request, response) => {
+    return response.send("Olá mundo Get");
+})
+app.post("/teste-post", (request, response) => {
+    return response.send("Olá mundo post")
+})
+
+
+create migration: yarn typeorm migration:create ./src/database/migrations/<migrationName>
+
+execute migration: yarn typeorm migration:run -d src/database/data-source.ts
+
+create entity: yarn typeorm entity:create src/entities/<entityName>

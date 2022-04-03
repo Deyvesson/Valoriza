@@ -12,3 +12,7 @@ create migration: yarn typeorm migration:create ./src/database/migrations/<migra
 execute migration: yarn typeorm migration:run -d src/database/data-source.ts
 
 create entity: yarn typeorm entity:create src/entities/<entityName>
+
+
+script start Dev: 
+"start": "ts-node-dev src/server.ts"
